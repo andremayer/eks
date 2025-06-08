@@ -1,0 +1,19 @@
+replicaCount: 2
+
+image:
+  repository: 655469961838.dkr.ecr.us-east-2.amazonaws.com/pocs
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 5000
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
